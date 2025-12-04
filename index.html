@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduTCG Hub - Create Your Educational Trading Card Game</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles and configuration */
+        :root {
+            --primary: #4f46e5; /* Indigo-600 */
+            --secondary: #10b981; /* Emerald-500 */
+            --dark-bg: #1f2937; /* Gray-800 */
+            --light-bg: #f9fafb; /* Gray-50 */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--light-bg);
+            color: #1f2937;
+        }
+        .text-gradient {
+            background-image: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        .card-shadow:hover {
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen">
+
+    <!-- Navbar -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-extrabold text-gradient">
+                EduTCG Hub
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#resources" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-150">Resources</a>
+                <a href="#research" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-150">Research</a>
+                <a href="#community" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-150">Community</a>
+            </nav>
+            <a href="https://discord.gg/your-discord-invite" target="_blank" class="bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-700 transition duration-150 shadow-md shadow-indigo-500/50 flex items-center group">
+                <i data-lucide="message-circle" class="w-5 h-5 mr-2 group-hover:rotate-3 transition duration-300"></i>
+                Join Discord
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="py-20 sm:py-32 bg-gray-900 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-5xl sm:text-7xl font-extrabold tracking-tight mb-4">
+                    Design Learning, <span class="text-gradient">Card by Card.</span>
+                </h1>
+                <p class="text-xl sm:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
+                    The one-stop-shop for educators and students ready to transform lessons into engaging Trading Card Games using the <strong class="font-bold text-indigo-400">EduTCG Google Gem.</strong>
+                </p>
+                <a href="#resources" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-semibold rounded-lg shadow-xl text-white bg-emerald-500 hover:bg-emerald-600 md:py-4 md:text-lg md:px-10 transition duration-200 transform hover:scale-105">
+                    Start Building Your TCG
+                    <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources" class="py-16 sm:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-extrabold tracking-tight text-gray-900">
+                        The EduTCG Blueprint
+                    </h2>
+                    <p class="mt-4 text-xl text-gray-500">
+                        Everything you need to conceptualize, design, and implement your educational TCG.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Step 1 Card -->
+                    <div class="p-6 bg-gray-50 rounded-xl border border-gray-200 card-shadow">
+                        <div class="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-100 text-indigo-600 mb-4">
+                            <i data-lucide="pen-tool" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">1. Concept & Learning Goals</h3>
+                        <p class="text-gray-600">Define the core subject matter (Math, History, Science) and the specific learning outcomes the game must achieve.</p>
+                        <a href="#" class="mt-3 text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center">
+                            Read Guide
+                        </a>
+                    </div>
+                    <!-- Step 2 Card (Focus on the Gem) -->
+                    <div class="p-6 bg-gray-50 rounded-xl border border-gray-200 card-shadow">
+                        <div class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 mb-4">
+                            <i data-lucide="gem" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">2. Using the EduTCG Gem</h3>
+                        <p class="text-gray-600">Leverage our <strong class="font-bold text-emerald-600">Google Gem</strong> to auto-generate card templates, flavor text, and initial mechanics based on your curriculum.</p>
+                        <a href="https://g.co/YourEduTCGGemLink" target="_blank" class="mt-3 text-emerald-600 hover:text-emerald-800 font-medium inline-flex items-center">
+                            Access the Gem
+                        </a>
+                    </div>
+                    <!-- Step 3 Card -->
+                    <div class="p-6 bg-gray-50 rounded-xl border border-gray-200 card-shadow">
+                        <div class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 text-blue-600 mb-4">
+                            <i data-lucide="swords" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">3. Mechanics & Ruleset</h3>
+                        <p class="text-gray-600">Develop balanced rules. How do students interact? What counts as a 'win' in terms of knowledge application?</p>
+                        <a href="#" class="mt-3 text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
+                            Rulebook Templates
+                        </a>
+                    </div>
+                    <!-- Step 4 Card -->
+                    <div class="p-6 bg-gray-50 rounded-xl border border-gray-200 card-shadow">
+                        <div class="flex items-center justify-center w-12 h-12 rounded-full bg-yellow-100 text-yellow-600 mb-4">
+                            <i data-lucide="users" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">4. Playtesting & Iteration</h3>
+                        <p class="text-gray-600">The most important step! Get students playing, gather feedback, and refine the game until the learning sticks.</p>
+                        <a href="#" class="mt-3 text-yellow-600 hover:text-yellow-800 font-medium inline-flex items-center">
+                            Best Practices
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Section -->
+        <section id="research" class="py-16 sm:py-24 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-extrabold tracking-tight text-gray-900">
+                        The Value of Gamified Learning
+                    </h2>
+                    <p class="mt-4 text-xl text-gray-500 max-w-3xl mx-auto">
+                        Evidence-based research links that demonstrate the profound impact of card games in fostering motivation, critical thinking, and retention.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Research Link 1 -->
+                    <div class="p-6 bg-white rounded-xl border border-indigo-100 card-shadow">
+                        <i data-lucide="book-open" class="w-8 h-8 text-indigo-600 mb-3"></i>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">Motivation & Engagement</h3>
+                        <p class="text-gray-600 mb-4">Study on how competitive, structured play increases student attendance and participation in complex topics.</p>
+                        <a href="https://example.com/research-motivation" target="_blank" class="text-sm font-semibold text-indigo-600 hover:text-indigo-800">
+                            View Abstract & PDF &rarr;
+                        </a>
+                    </div>
+                    <!-- Research Link 2 -->
+                    <div class="p-6 bg-white rounded-xl border border-indigo-100 card-shadow">
+                        <i data-lucide="brain" class="w-8 h-8 text-indigo-600 mb-3"></i>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">Cognitive Load Reduction</h3>
+                        <p class="text-gray-600 mb-4">Paper exploring how game mechanics simplify complex procedural knowledge, aiding memory and application.</p>
+                        <a href="https://example.com/research-cognitive" target="_blank" class="text-sm font-semibold text-indigo-600 hover:text-indigo-800">
+                            View Abstract & PDF &rarr;
+                        </a>
+                    </div>
+                    <!-- Research Link 3 -->
+                    <div class="p-6 bg-white rounded-xl border border-indigo-100 card-shadow">
+                        <i data-lucide="users-2" class="w-8 h-8 text-indigo-600 mb-3"></i>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">Social & Emotional Learning (SEL)</h3>
+                        <p class="text-gray-600 mb-4">Research focusing on cooperation, strategic communication, and sportsmanship developed through TCG play.</p>
+                        <a href="https://example.com/research-sel" target="_blank" class="text-sm font-semibold text-indigo-600 hover:text-indigo-800">
+                            View Abstract & PDF &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community and Links Section -->
+        <section id="community" class="py-16 sm:py-24 bg-gray-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-extrabold tracking-tight text-white">
+                        Join the Global TCG Community
+                    </h2>
+                    <p class="mt-4 text-xl text-gray-400 max-w-3xl mx-auto">
+                        Connect with other educators, share your designs, and draw inspiration from the best card games in the world.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Discord Card -->
+                    <div class="p-8 bg-indigo-800 rounded-xl border border-indigo-700 shadow-2xl card-shadow group">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-white">The EduTCG Discord</h3>
+                            <i data-lucide="message-circle" class="w-8 h-8 text-indigo-300 group-hover:rotate-6 transition duration-300"></i>
+                        </div>
+                        <p class="text-indigo-200 mb-6">
+                            The central hub for support, resource sharing, and collaboration. Get live feedback on your card designs and ask questions about the Google Gem.
+                        </p>
+                        <a href="https://discord.gg/your-discord-invite" target="_blank" class="inline-flex items-center font-semibold text-white bg-indigo-600 hover:bg-indigo-500 py-2 px-4 rounded-lg transition duration-150">
+                            <i data-lucide="users-round" class="w-5 h-5 mr-2"></i>
+                            Join Our Server Now
+                        </a>
+                    </div>
+
+                    <!-- Popular TCG Inspiration -->
+                    <div class="p-8 bg-white rounded-xl border border-gray-200 shadow-2xl card-shadow group">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-gray-900">Inspiration from Popular TCGs</h3>
+                            <i data-lucide="diamond" class="w-8 h-8 text-emerald-600 group-hover:scale-110 transition duration-300"></i>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Analyze the mechanics, aesthetics, and economic systems of successful TCGs to inform your own design.
+                        </p>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-500 mr-2"></i> <a href="https://example.com/magic" target="_blank" class="hover:text-emerald-600">Magic: The Gathering (Strategy)</a></li>
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-500 mr-2"></i> <a href="https://example.com/pokemon" target="_blank" class="hover:text-emerald-600">Pokémon TCG (Simplicity & Collection)</a></li>
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-500 mr-2"></i> <a href="https://example.com/yugioh" target="_blank" class="hover:text-emerald-600">Yu-Gi-Oh! (Complex Combos)</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2024 EduTCG Hub. Powered by the EduTCG Google Gem. All rights reserved.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#resources" class="hover:text-white transition duration-150">Resources</a>
+                <a href="#research" class="hover:text-white transition duration-150">Research</a>
+                <a href="mailto:contact@edutcg.com" class="hover:text-white transition duration-150">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script to initialize Lucide icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
