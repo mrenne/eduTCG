@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Byte Battle - The Computer Science TCG</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a2e; /* Deep purple background */
+        }
+        .card-mockup {
+            width: 100%;
+            max-width: 250px;
+            height: 350px;
+            border-radius: 1rem;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+        .card-mockup:hover {
+            transform: translateY(-5px);
+        }
+        .hardware-bg { background: linear-gradient(135deg, #00C6FF, #0072FF); }
+        .software-bg { background: linear-gradient(135deg, #FF7F50, #FF4500); }
+        .network-bg { background: linear-gradient(135deg, #9932CC, #4B0082); }
+        .energy-bg { background: #32CD32; }
+        .stat-box {
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="text-white">
+
+    <!-- Header Section -->
+    <header class="bg-gray-800 shadow-xl sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-3xl font-extrabold text-cyan-400">Byte Battle</h1>
+            <nav>
+                <a href="#about" class="mx-2 hover:text-cyan-400 transition">About</a>
+                <a href="#rules" class="mx-2 hover:text-cyan-400 transition">Rules</a>
+                <a href="#cards" class="mx-2 hover:text-cyan-400 transition">Cards</a>
+                <a href="#design" class="mx-2 hover:text-cyan-400 transition">Design</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-20 text-center bg-gray-900 border-b border-cyan-500/30">
+        <div class="container mx-auto px-4">
+            <h2 class="text-5xl md:text-7xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">
+                Level Up Your Learning
+            </h2>
+            <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+                **Byte Battle** is the educational Trading Card Game designed for 6th-8th graders to master **Computer Systems** and **Network Protocols** through fast-paced, strategic duels.
+            </p>
+            <a href="#rules" class="mt-8 inline-block bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition transform hover:scale-105">
+                Start the Duel!
+            </a>
+        </div>
+    </section>
+
+    <!-- How the Game Was Made (Design) Section -->
+    <section id="design" class="py-16">
+        <div class="container mx-auto px-4">
+            <h3 class="text-4xl font-bold mb-8 text-center text-cyan-400">The Design Protocol</h3>
+            <div class="bg-gray-800 p-8 rounded-xl shadow-2xl space-y-6">
+                <p class="text-lg text-gray-300">
+                    **Byte Battle** was created by **EduTCG** as an AI-assisted design project focused on **educational emergent gameplay**. The primary goal was to make complex topics from the **North Carolina K-12 Computer Science Standards (Grades 6-8)** fun and accessible.
+                </p>
+                <div class="md:flex md:space-x-8 space-y-6 md:space-y-0">
+                    <div class="flex-1 p-4 bg-gray-700 rounded-lg">
+                        <h4 class="text-2xl font-semibold mb-2 text-blue-400">Target Audience & Curriculum</h4>
+                        <p class="text-sm">The game directly addresses middle school standards including **68-CS-02 (Hardware/Software)** and **68-NI-04 (Encryption)**. We translated concepts like **Firewalls**, **Routers**, and **Protocols** into tangible card effects to bridge the gap between abstract learning and practical application.</p>
+                    </div>
+                    <div class="flex-1 p-4 bg-gray-700 rounded-lg">
+                        <h4 class="text-2xl font-semibold mb-2 text-blue-400">Emergent Gameplay Focus</h4>
+                        <p class="text-sm">Inspired by classic TCG design, we ensured cards have synergistic interactions. For instance, using the **Router** (Hardware) rewards successful attacks, encouraging players to chain **Network Tracer** attacks (Network Cards) for higher value—a core element of emergent strategy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rules Section -->
+    <section id="rules" class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h3 class="text-4xl font-bold mb-8 text-center text-cyan-400">The Core Rules: System Warfare</h3>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Game Objective -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700">
+                    <h4 class="text-2xl font-semibold mb-3 text-red-400">Objective</h4>
+                    <p class="text-lg">Players duel by building a **System** of components to attack the opponent's core **Tier 1 System**. You win the game when your opponent's **Tier 1 System** is reduced to **Level 0**.</p>
+                </div>
+
+                <!-- Setup -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700">
+                    <h4 class="text-2xl font-semibold mb-3 text-yellow-400">Setup (Quick Version)</h4>
+                    <ul class="list-disc list-inside space-y-1 text-lg">
+                        <li>Each player starts with **20 Life Points**.</li>
+                        <li>Shuffled Deck size: **40 cards**.</li>
+                        <li>Starting Hand: **5 cards**.</li>
+                        <li>Start a **Tier 1 System** card at **Level 1** (The core target).</li>
+                        <li>Starting Resources: **3 Data Packet (Energy)** available.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Turn Flow -->
+            <div class="bg-gray-800 p-8 rounded-xl shadow-2xl mt-8">
+                <h4 class="text-2xl font-semibold mb-4 text-green-400">Turn Flow</h4>
+                <ol class="space-y-4">
+                    <li class="p-4 bg-gray-700 rounded-lg">
+                        <span class="font-bold text-xl text-green-300">1. Start Phase:</span> Draw **1 card**. Gain **1 Data Packet (Energy)**.
+                    </li>
+                    <li class="p-4 bg-gray-700 rounded-lg">
+                        <span class="font-bold text-xl text-green-300">2. Main Phase (Action Loop):</span> Perform actions as desired:
+                        <ul class="list-disc list-inside ml-6 text-lg space-y-1 mt-1">
+                            <li>**Play a Card:** Pay its Energy **Cost**.</li>
+                            <li>**Use a Component Action:** **Rest** (turn sideways) a Component to use its ability.</li>
+                            <li>**Level Up System:** Pay **2 Energy** to increase your **Tier 1 System's** Level by 1 (max 5).</li>
+                        </ul>
+                    </li>
+                    <li class="p-4 bg-gray-700 rounded-lg">
+                        <span class="font-bold text-xl text-green-300">3. End Phase:</span> Turn all your **Rested** cards **Active** (upright).
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards Section -->
+    <section id="cards" class="py-16">
+        <div class="container mx-auto px-4">
+            <h3 class="text-4xl font-bold mb-12 text-center text-cyan-400">Card Mockups: Hardware, Software, Network</h3>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-center">
+
+                <!-- Mockup 1: Hardware Component (CPU) -->
+                <div class="card-mockup hardware-bg">
+                    <div class="font-extrabold text-2xl text-white mb-2 border-b-2 pb-1 border-white/50">CPU: Processor</div>
+                    <div class="text-sm font-light uppercase tracking-widest mb-4">Component - Hardware</div>
+
+                    <div class="stat-box p-2 mb-4 flex justify-between items-center rounded-lg">
+                        <span class="text-xl font-bold">LEVEL: 2</span>
+                        <span class="text-xl font-bold bg-green-500 px-3 py-1 rounded-full shadow-lg">COST: 2</span>
+                    </div>
+
+                    <p class="flex-grow text-sm font-normal bg-black/30 p-3 rounded-lg">
+                        **Action:** **Rest** this card. Choose a Component Card you control. That card deals **1 Damage** to an enemy Component's Level.
+                    </p>
+                    <p class="text-xs italic mt-auto pt-2 text-white/80">
+                        *CS Concept: Processing & Execution.*
+                    </p>
+                </div>
+
+                <!-- Mockup 2: Software Component (Firewall) -->
+                <div class="card-mockup software-bg">
+                    <div class="font-extrabold text-2xl text-white mb-2 border-b-2 pb-1 border-white/50">Firewall</div>
+                    <div class="text-sm font-light uppercase tracking-widest mb-4">Component - Software</div>
+
+                    <div class="stat-box p-2 mb-4 flex justify-between items-center rounded-lg">
+                        <span class="text-xl font-bold">LEVEL: 3</span>
+                        <span class="text-xl font-bold bg-green-500 px-3 py-1 rounded-full shadow-lg">COST: 3</span>
+                    </div>
+
+                    <p class="flex-grow text-sm font-normal bg-black/30 p-3 rounded-lg">
+                        **Passive:** (Always Active) When an opponent plays a **Network Card**, the card's effect damage is reduced by **1** (min 0).
+                    </p>
+                    <p class="text-xs italic mt-auto pt-2 text-white/80">
+                        *CS Concept: Digital Security Measure (68-NI-02).*
+                    </p>
+                </div>
+
+                <!-- Mockup 3: Network Card (Data Encryption) -->
+                <div class="card-mockup network-bg">
+                    <div class="font-extrabold text-2xl text-white mb-2 border-b-2 pb-1 border-white/50">Data Encryption</div>
+                    <div class="text-sm font-light uppercase tracking-widest mb-4">Network - One-Shot</div>
+
+                    <div class="stat-box p-2 mb-4 flex justify-end items-center rounded-lg">
+                        <span class="text-xl font-bold bg-green-500 px-3 py-1 rounded-full shadow-lg">COST: 2</span>
+                    </div>
+
+                    <p class="flex-grow text-sm font-normal bg-black/30 p-3 rounded-lg">
+                        **Effect:** Reduce the damage dealt by an incoming **Network Card** by **3** this turn.
+                    </p>
+                    <p class="text-xs italic mt-auto pt-2 text-white/80">
+                        *CS Concept: Secure Transmission (68-NI-04).*
+                    </p>
+                </div>
+
+                <!-- Mockup 4: Tier 1 System (The Core Target) -->
+                <div class="card-mockup" style="background: linear-gradient(135deg, #FFD700, #DAA520);">
+                    <div class="font-extrabold text-2xl text-gray-900 mb-2 border-b-2 pb-1 border-gray-900/50">Tier 1 System</div>
+                    <div class="text-sm font-light uppercase tracking-widest mb-4 text-gray-800">System - Core Target</div>
+
+                    <div class="stat-box p-2 mb-4 flex justify-between items-center rounded-lg bg-gray-900/20 border-gray-900/50">
+                        <span class="text-xl font-bold text-gray-900">LIFE POINTS: 20</span>
+                        <span class="text-xl font-bold bg-red-600 px-3 py-1 rounded-full shadow-lg text-white">LEVEL: Varies</span>
+                    </div>
+
+                    <p class="flex-grow text-sm font-normal bg-gray-900/30 p-3 rounded-lg text-gray-900">
+                        **Passive:** This card's **Level** is equivalent to your **Life Points**. When this card's Level is reduced to 0, you lose the game.
+                    </p>
+                    <p class="text-xs italic mt-auto pt-2 text-gray-800">
+                        *The essential core of your digital identity.*
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="about" class="bg-gray-800 py-6 mt-12">
+        <div class="container mx-auto px-4 text-center text-gray-400">
+            <p>&copy; 2025 EduTCG - Byte Battle. All rights reserved. Designed for 6th-8th Grade Computer Science Education (NC K-12 Standards).</p>
+        </div>
+    </footer>
+
+</body>
+</html>
