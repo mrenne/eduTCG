@@ -1,1 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources for Educational Game Design - eduTCG</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a2e; /* Deep purple background */
+        }
+        .resource-card {
+            border-left: 4px solid #00FFFF; /* Cyan accent */
+            transition: all 0.2s ease;
+        }
+        .resource-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0, 200, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="text-white">
 
+    <!-- Header Section (Matching index.html) -->
+    <header class="bg-gray-800 shadow-xl sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-3xl font-extrabold text-cyan-400">Byte Battle</h1>
+            <nav>
+                <a href="index.html#about" class="mx-2 hover:text-cyan-400 transition">About</a>
+                <a href="index.html#rules" class="mx-2 hover:text-cyan-400 transition">Rules</a>
+                <a href="index.html#cards" class="mx-2 hover:text-cyan-400 transition">Cards</a>
+                <a href="index.html#design" class="mx-2 hover:text-cyan-400 transition">Design</a>
+                <a href="tcg_cs_example.html" class="mx-2 hover:text-cyan-400 transition font-semibold text-yellow-300">Byte Battle</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-20 text-center bg-gray-900 border-b border-cyan-500/30">
+        <div class="container mx-auto px-4">
+            <h2 class="text-5xl md:text-6xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-400">
+                Forge Your Own Game
+            </h2>
+            <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+                Resources for Educators and Students to Design Custom Educational Trading Card Games & Board Games.
+            </p>
+        </div>
+    </section>
+
+    <!-- Resources Content Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+
+            <!-- Category 1: Game Design Principles -->
+            <h3 class="text-3xl font-bold mb-6 text-cyan-400 border-b border-cyan-400/50 pb-2">1. Educational Game Design Principles</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <div class="resource-card bg-gray-800 p-6 rounded-xl">
+                    <h4 class="text-xl font-semibold mb-2 text-green-400">Mechanics-to-Learning Mapping</h4>
+                    <p class="text-sm text-gray-400">The core idea of translating abstract concepts (like "Encryption") into tangible game mechanics (like "Damage Reduction"). Ensure every rule serves a learning goal.</p>
+                </div>
+                <div class="resource-card bg-gray-800 p-6 rounded-xl">
+                    <h4 class="text-xl font-semibold mb-2 text-green-400">Intrinsic Motivation (Malone's Principles)</h4>
+                    <p class="text-sm text-gray-400">Focus on design elements that encourage Curiosity, Fantasy (theme), Challenge, and Control to keep players engaged without external rewards.</p>
+                </div>
+                <div class="resource-card bg-gray-800 p-6 rounded-xl">
+                    <h4 class="text-xl font-semibold mb-2 text-green-400">The 4 C's of TCG Design</h4>
+                    <p class="text-sm text-gray-400">Design around **Collection**, **Creation** (deckbuilding), **Competition**, and **Community** to maximize engagement and long-term interest among players.</p>
+                </div>
+            </div>
+
+            <!-- Category 2: Digital & Physical Creation Tools -->
+            <h3 class="text-3xl font-bold mb-6 text-cyan-400 border-b border-cyan-400/50 pb-2">2. Digital & Physical Creation Tools</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <div class="resource-card bg-gray-800 p-6 rounded-xl">
+                    <h4 class="text-xl font-semibold mb-2 text-blue-400">Card Maker Software (General)</h4>
+                    <p class="text-sm text-gray-400">Tools like **Canva** (for layout/visuals) or dedicated tabletop software (for mockups and testing) simplify the design and asset creation process.</p>
+                </div>
+                <div class="resource-card bg-gray-800 p-6 rounded-xl">
+                    <h4 class="text-xl font-semibold mb-2 text-blue-400">Prototyping Materials</h4>
+                    <p class="text-sm text-gray-400">Use simple materials like index cards, sticky notes, and dice for the earliest phases of playtesting. Speed and low fidelity encourage rapid iteration.</p>
+                </div>
+                <div class="resource-card bg-gray-800 p-6 rounded-xl">
+                    <h4 class="text-xl font-semibold mb-2 text-blue-400">Balance Modeling Spreadsheets</h4>
+                    <p class="text-sm text-gray-400">Create a central spreadsheet to manage all card stats (Level, Cost, Damage). Use simple math (like cost-per-damage ratios) to spot outliers and maintain balance integrity.</p>
+                </div>
+            </div>
+
+            <!-- Category 3: Playtesting and Iteration -->
+            <h3 class="text-3xl font-bold mb-6 text-cyan-400 border-b border-cyan-400/50 pb-2">3. Playtesting and Iteration</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="resource-card bg-gray-800 p-6 rounded-xl">
+                    <h4 class="text-xl font-semibold mb-2 text-red-400">Blind Playtesting</h4>
+                    <p class="text-sm text-gray-400">Hand the rulebook and components to new players without providing verbal instruction. If they can play successfully, your rule set is clear.</p>
+                </div>
+                <div class="resource-card bg-gray-800 p-6 rounded-xl">
+                    <h4 class="text-xl font-semibold mb-2 text-red-400">The "Fun First" Rule</h4>
+                    <p class="text-sm text-gray-400">If a concept is accurate but dull, prioritize making it fun and engaging. Educational value is lost if players quit before learning begins.</p>
+                </div>
+                <div class="resource-card bg-gray-800 p-6 rounded-xl">
+                    <h4 class="text-xl font-semibold mb-2 text-red-400">Feedback Loops</h4>
+                    <p class="text-sm text-gray-400">Incorporate **Feedback Cards** or simple victory conditions that track learning progress. Make wins feel earned and failures feel like puzzles to solve.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-6 mt-12">
+        <div class="container mx-auto px-4 text-center text-gray-400">
+            <p>Ready to apply these concepts? Head back to the <a href="index.html" class="text-cyan-400 hover:text-cyan-300 font-semibold">Byte Battle Home Page</a>.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
